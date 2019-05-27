@@ -3,20 +3,20 @@ library(dplyr)
 
 #read data from txt-files
 #read training data
-train_x <- read.table("./train/X_train.txt")
-train_y <- read.table("./train/y_train.txt")
-train_sub <- read.table("./train/subject_train.txt")
+train_x <- read.table("./data/train/X_train.txt")
+train_y <- read.table("./data/train/y_train.txt")
+train_sub <- read.table("./data/train/subject_train.txt")
 
 #read test data
-test_x <- read.table("./test/X_test.txt")
-test_y <- read.table("./test/y_test.txt")
-test_sub <- read.table("./test/subject_test.txt")
+test_x <- read.table("./data/test/X_test.txt")
+test_y <- read.table("./data/test/y_test.txt")
+test_sub <- read.table("./data/test/subject_test.txt")
 
 # read activity labels 
-act_labels <- read.table("./activity_labels.txt")
+act_labels <- read.table("./data/activity_labels.txt")
 
 # read features
-raw_features <- read.table("./features.txt") 
+raw_features <- read.table("./data/features.txt") 
 
 # for selecting only mean or std columns later
 interest_features <- raw_features[grep("mean\\(\\)|std\\(\\)", raw_features[,2]),]
@@ -42,5 +42,8 @@ merged_total <- cbind(merged_sub,merged_y,merged_x)
 colnames(merged_sub) <- "subject"
 merged_total_2 <- cbind(merged_x, alabel, merged_sub)
 average_merged_total_2 <- merged_total_2 %>% group_by(alabel, subject) %>% summarize_each(funs(mean))
+
+write.csv(merged_total_2,"./tidy_data_averaged.csv", row.names = FALSE)
+write.csv(average_merged_total_2,"./tidy_data_full.csv", row.names = FALSE)
 
 
