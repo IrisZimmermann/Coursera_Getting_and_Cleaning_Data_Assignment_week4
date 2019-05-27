@@ -47,9 +47,5 @@ colnames(merged_sub) <- "subject"
 merged_total_2 <- cbind(merged_x, alabel, merged_sub)
 average_merged_total_2 <- merged_total_2 %>% group_by(alabel, subject) %>% summarize_each(funs(mean))
 
-# 11. Write tidy data sets in csv-files
-write.csv(merged_total_2,"./tidy_data_averaged.csv", row.names = FALSE)
-write.csv(average_merged_total_2,"./tidy_data_full.csv", row.names = FALSE)
-
 
 

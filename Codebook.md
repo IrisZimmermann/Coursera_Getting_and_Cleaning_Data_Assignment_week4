@@ -3,8 +3,8 @@
 ## 1. The untidy data set can be found in the folder ./data
 ## 2. In order to create a clean and tidy data set, source and run the script "run_analysis.R" in RStudio
 ## 3. The tidy data set contains 
-## 	a) a set with averaged values denoted as "tidy_data_averaged.csv"
-##	b) a set with tidy data denoted as "tidy_data_full.csv"
+## 	a) a set with averaged values denoted as "tidy_data_averaged.txt"
+##	b) a set with tidy data denoted as "tidy_data_full.txt"
 ## ... and can be obtained by sourcing and running "run_analysis.R" in RStudio
 
 
@@ -67,12 +67,8 @@ The tidy data set is obtained by ...
     ... using descriptive activity names to name the activities in the data set.
     From this data set, a second, independent tidy data set with the average of each variable for each activity and each subject is created, which is called
 
-- 'tidy_data_full.csv': tidy data set
+- 'tidy_data_full.csv (tidy_data_full.txt)': tidy data set
+- 'tidy_data_average.csv (tidy_data_average.txt)': tidy data set
 
-
-
-Use of this dataset in publications must be acknowledged by referencing the following publication [1] 
-
-[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardwar
-## 	a) a set with averaged values denoted as "tidy_data_averaged.csv"
-##	b) a set with tidy data denoted as "tidy_data_full.csv"
+## 	a) a set with averaged values denoted as "tidy_data_averaged.csv" and "tidy_data_averaged.txt"
+##	b) a set with tidy data denoted as "tidy_data_full.csv" and "tidy_data_full.txt"
